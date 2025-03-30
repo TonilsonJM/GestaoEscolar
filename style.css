@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: rgb(78, 78, 98);
+  width: 100%;
+  padding: 1rem 4rem;
+  position: relative;
+}
+ul,
+a {
+  color: aliceblue;
+  text-decoration: none;
+  list-style: none;
+}
+nav {
+  color: aliceblue;
+  width: 100%;
+  align-items: center;
+  kerning: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.lista {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cta-box {
+  width: fit-content;
+  border: 0;
+}
+.cta-box .ctabutton {
+  padding: 0.7rem 1rem;
+  color: white;
+  background-color: rgb(82, 111, 128);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.hidden {
+  display: none;
+}
+.burguerbox{
+    display: none;
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    cursor: pointer;
+}
+.burguerbox span {
+width: 20px;
+height: 3px;
+background-color: white;
+}
+.navcolaps.hidden{
+
+overflow: hidden;
+height: 0;
+width: 0;
+}
+.navcolaps{
+    position: absolute;
+    top: 5.5rem;
+    right: 1rem;
+    background-color: rgb(78, 78, 98);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+    -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+    -moz-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+    -ms-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+    -o-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+.navcolaps .cta-box{
+  width: 100%;
+  padding: 1rem;
+}
+.navcolaps .lista{
+display: flex;
+flex-direction: column;
+margin: 1rem;
+}
+.navcolaps .cta-box button{
+width: 100%;
+}
+@media screen and (max-width: 750px) {
+ nav .lista {
+    display: none;
+  }
+  nav .cta-box {
+    display: none;
+  }
+  .burguerbox{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
+@media screen and (width > 750px) {
+ .navcolaps.hidden{
+  display: none;
+
+ }
+ .navcolaps {
+  display: none;
+}
+ }
+
+ 
