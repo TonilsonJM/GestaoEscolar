@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações</title>
+  <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Configurações</div>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="aluno.html">Alunos</a></li>
+        <li><a href="professores.html">Professores</a></li>
+        <li><a href="#">Financeiro</a></li>
+        <li><a href="perfil.html">Configurações</a></li>
+        <li><a href="login.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bem-vindo à Página de Configurações</h1>
+    <p>Personalize sua experiência e gerencie as configurações do sistema.</p>
+    <button>Saiba Mais</button>
+  </section>
+
+  <main>
+    <!-- Seção Perfil -->
+    <section id="perfil" class="secao-perfil">
+      <h2>Configurações de Perfil</h2>
+      <div class="card">
+        <p><strong>Nome do Perfil:</strong> Administrador</p>
+        <button id="alterar-senha-btn">Alterar Palavra-Passe</button>
+      </div>
+    </section>
+
+    <!-- Seção Notificações -->
+    <section id="notificacoes" class="secao-notificacoes">
+      <h2>Notificações Recentes</h2>
+      <ul>
+        <li>Sistema atualizado para a versão 1.2.</li>
+        <li>Nova mensagem de Merivaldo Canjengo.</li>
+        <li>Backup realizado com sucesso.</li>
+      </ul>
+    </section>
+
+    <!-- Seção Usuários -->
+    <section id="usuarios" class="secao-usuarios">
+      <h2>Gerenciamento de Usuários</h2>
+      <form id="adicionar-usuario-form">
+        <label for="nome-usuario">Nome do Usuário:</label>
+        <input type="text" id="nome-usuario" name="nome-usuario" placeholder="Digite o nome do gestor" required>
+
+        <label for="email-usuario">Email:</label>
+        <input type="email" id="email-usuario" name="email-usuario" placeholder="Digite o email" required>
+
+        <button type="submit">Adicionar Gestor</button>
+      </form>
+      <p id="sucesso-adicionar" class="sucesso" style="display: none;">Gestor adicionado com sucesso!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gestão Escolar. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="perfil.js"></script>
+</body>
+</html>

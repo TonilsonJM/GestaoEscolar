@@ -1,0 +1,195 @@
+/* Estilo Global */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #0078d4;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: inline-block; /* Garante que transform funcione */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    transform: scale(1.1); /* Aumenta levemente a escala */
+    color: #ffcc00; /* Muda a cor do texto */
+  }
+  
+  /* Hero Section para Professores */
+  .hero-professores {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #0078d4, #005a9e);
+    color: white;
+  }
+  
+  .hero-professores h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .hero-professores p {
+    font-size: 1.2em;
+    color: #f8f9fa;
+  }
+  
+  .hero-professores button {
+    background-color: white;
+    color: #0078d4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .hero-professores button:hover {
+    transform: scale(1.1); /* Aumenta o botão */
+    background-color: #e1e1e1; /* Altera a cor de fundo */
+  }
+  
+  /* Seção de Professores */
+  .professores {
+    padding: 40px 20px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .professores h2 {
+    color: #005a9e;
+  }
+  
+  .professores p {
+    color: #6c757d;
+    margin-bottom: 20px;
+  }
+  
+  /* Tabela de Professores */
+  .tabela-professores {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tabela-professores thead {
+    background-color: #0078d4;
+    color: white;
+  }
+  
+  .tabela-professores th, .tabela-professores td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .tabela-professores th {
+    font-weight: bold;
+  }
+  
+  .tabela-professores tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .tabela-professores tr:hover {
+    background-color: #e1e1e1;
+  }
+  
+  /* Seção Novo Professor */
+  .novo-professor {
+    padding: 40px 20px;
+    background-color: #f0f2f5;
+    text-align: center;
+    border-top: 2px solid #005a9e;
+  }
+  
+  .novo-professor h2 {
+    color: #0078d4;
+  }
+  
+  .novo-professor form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .novo-professor label {
+    font-weight: bold;
+  }
+  
+  .novo-professor input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .novo-professor button {
+    background-color: #005a9e;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .novo-professor button:hover {
+    transform: scale(1.1); /* Aumenta o botão */
+    background-color: #003f73; /* Altera a cor de fundo */
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #1b1f23;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 20px;
+  }
+  
+  /* Mensagem de Sucesso */
+  .sucesso {
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+  }
+  

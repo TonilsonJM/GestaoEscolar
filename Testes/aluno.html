@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão Escolar</title>
+  <link rel="stylesheet" href="aluno.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Gestão Escolar</div>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="aluno.html">Alunos</a></li>
+        <li><a href="professores.html">Professores</a></li>
+        <li><a href="#">Financeiro</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="login.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Bem-vindo ao Sistema de Gestão Escolar</h1>
+      <p>Gerencie alunos, professores e recursos com facilidade e eficiência.</p>
+      <button>Saiba Mais</button>
+    </section>
+
+    <section id="alunos" class="alunos">
+      <h2>Gestão de Alunos</h2>
+      <p>Acompanhe informações essenciais e atualizadas sobre seus alunos.</p>
+      
+      <table class="tabela-alunos">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Turma</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="lista-alunos">
+          <tr>
+            <td>Merivaldo Canjengo</td>
+            <td>20 anos</td>
+            <td>12º Ano</td>
+            <td>Merivaldo@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Augusta Muimo</td>
+            <td>19 anos</td>
+            <td>10º Ano</td>
+            <td>muimo.algusta2@gmail.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="novo-aluno">
+      <h2>Adicionar Novo Aluno</h2>
+      <form id="form-novo-aluno">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite o nome completo" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" placeholder="Digite a idade" required>
+
+        <label for="turma">Turma:</label>
+        <input type="text" id="turma" name="turma" placeholder="Digite a turma" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Digite o email" required>
+
+        <button type="submit">Adicionar Aluno</button>
+      </form>
+      <p id="mensagem-sucesso" class="sucesso" style="display: none;">Aluno registrado com sucesso!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gestão Escolar. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="aluno.js"></script>
+</body>
+</html>
