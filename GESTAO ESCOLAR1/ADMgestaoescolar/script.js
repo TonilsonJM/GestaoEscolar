@@ -1,8 +1,8 @@
 // Dados mockados para teste
 let alunos = [
-    { id: 1, matricula: "2024001", nome: "João Silva", turma: "9º Ano A", idade: 15 },
-    { id: 2, matricula: "2024002", nome: "Maria Santos", turma: "9º Ano A", idade: 14 },
-    { id: 3, matricula: "2024003", nome: "Pedro Oliveira", turma: "8º Ano B", idade: 13 }
+    { id: 1, matricula: "2024001", nome: "António Monteiro", turma: "13 Ano A", idade: 19 },
+    { id: 2, matricula: "2024002", nome: "Merivaldo Canjengo", turma: "13 Ano A", idade: 18 },
+    { id: 3, matricula: "2024003", nome: "Augusta Muimo", turma: "13 Ano B", idade: 20 }
 ];
 
 let professores = [
