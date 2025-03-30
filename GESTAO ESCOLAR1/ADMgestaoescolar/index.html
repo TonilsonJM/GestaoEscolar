@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Gestão Escolar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="logo">
+          <h2>SGE</h2>
+        </div>
+        <ul class="menu">
+          <li><a href="#" onclick="showSection('dashboard')"><i class="fas fa-home"></i> Dashboard</a></li>
+          <li><a href="#" onclick="showSection('alunos')"><i class="fas fa-user-graduate"></i> Alunos</a></li>
+          <li><a href="#" onclick="showSection('professores')"><i class="fas fa-chalkboard-teacher"></i> Professores</a></li>
+          <li><a href="#" onclick="showSection('turmas')"><i class="fas fa-users"></i> Turmas</a></li>
+          <li><a href="#" onclick="showSection('notas')"><i class="fas fa-star"></i> Notas</a></li>
+          <li><a href="#" onclick="showSection('frequencia')"><i class="fas fa-calendar-check"></i> Frequência</a></li>
+        </ul>
+      </nav>
+
+      <main class="content">
+        <header>
+          <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button><i class="fas fa-search"></i></button>
+          </div>
+          <div class="user-info">
+            <span>Administrador</span>
+            <img src="https://via.placeholder.com/40" alt="User">
+          </div>
+        </header>
+
+        <section id="dashboard" class="section active">
+          <h2>Dashboard</h2>
+          <div class="dashboard-cards">
+            <div class="card">
+              <h3>Total de Alunos</h3>
+              <p class="number">250</p>
+            </div>
+            <div class="card">
+              <h3>Total de Professores</h3>
+              <p class="number">25</p>
+            </div>
+            <div class="card">
+              <h3>Turmas Ativas</h3>
+              <p class="number">12</p>
+            </div>
+            <div class="card">
+              <h3>Média Geral</h3>
+              <p class="number">8.5</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="alunos" class="section">
+          <h2>Gestão de Alunos</h2>
+          <div class="actions">
+            <button onclick="showModal('aluno')" class="btn-add"><i class="fas fa-plus"></i> Novo Aluno</button>
+          </div>
+          <table id="tabelaAlunos">
+            <thead>
+              <tr>
+                <th>Matrícula</th>
+                <th>Nome</th>
+                <th>Turma</th>
+                <th>Idade</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Preenchido via JavaScript -->
+            </tbody>
+          </table>
+        </section>
+
+        <section id="professores" class="section">
+          <h2>Gestão de Professores</h2>
+          <div class="actions">
+            <button onclick="showModal('professor')" class="btn-add"><i class="fas fa-plus"></i> Novo Professor</button>
+          </div>
+          <table id="tabelaProfessores">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Disciplina</th>
+                <th>Contato</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Preenchido via JavaScript -->
+            </tbody>
+          </table>
+        </section>
+
+        <section id="turmas" class="section">
+          <h2>Gestão de Turmas</h2>
+          <div class="actions">
+            <button onclick="showModal('turma')" class="btn-add"><i class="fas fa-plus"></i> Nova Turma</button>
+          </div>
+          <table id="tabelaTurmas">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Professor</th>
+                <th>Alunos</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Preenchido via JavaScript -->
+            </tbody>
+          </table>
+        </section>
+
+        <section id="notas" class="section">
+          <h2>Gestão de Notas</h2>
+          <div class="notas-container">
+            <div class="filtros">
+              <select id="turmaSelecionada">
+                <option value="">Selecione a Turma</option>
+              </select>
+              <select id="disciplinaSelecionada">
+                <option value="">Selecione a Disciplina</option>
+              </select>
+            </div>
+            <table id="tabelaNotas">
+              <thead>
+                <tr>
+                  <th>Aluno</th>
+                  <th>Nota 1</th>
+                  <th>Nota 2</th>
+                  <th>Nota 3</th>
+                  <th>Média</th>
+                  <th>Situação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Preenchido via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="frequencia" class="section">
+          <h2>Controle de Frequência</h2>
+          <div class="frequencia-container">
+            <div class="filtros">
+              <select id="turmaFrequencia">
+                <option value="">Selecione a Turma</option>
+              </select>
+              <input type="date" id="dataFrequencia">
+            </div>
+            <table id="tabelaFrequencia">
+              <thead>
+                <tr>
+                  <th>Aluno</th>
+                  <th>Presente</th>
+                  <th>Observações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Preenchido via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Modal para adicionar/editar registros -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle">Adicionar</h2>
+        <form id="formCadastro">
+          <!-- Campos dinâmicos serão inseridos aqui via JavaScript -->
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
